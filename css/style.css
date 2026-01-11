@@ -1,3 +1,5 @@
+/* ================== GLOBAL ================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,182 +8,191 @@
 }
 
 body {
-    background-color: #0b1020;
+    background: radial-gradient(circle at top, #0f2027, #050a14);
     color: #ffffff;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    overflow-x: hidden;
 }
 
-h1 {
-    font-size: 3rem;
-    color: #00e5ff;
+
+/* ================== AUTH ================== */
+
+.auth-box {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
 }
 
-p {
-    margin-top: 10px;
-    font-size: 1.1rem;
-    opacity: 0.8;
-}
 
-.hero {
-    min-height: 100vh;
-    background: radial-gradient(circle at top, #0f1b3d, #0b1020);
-    padding: 30px 80px;
-}
+/* ================== NAVBAR ================== */
 
-.nav {
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px 70px;
+    position: sticky;
+    top: 0;
+    background: rgba(5, 10, 20, 0.75);
+    backdrop-filter: blur(15px);
+    z-index: 100;
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 700;
-    color: #00e5ff;
+    background: linear-gradient(90deg, #00f5ff, #8a5cff);
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
-.nav-links {
-    list-style: none;
+.navbar nav a {
+    margin-left: 28px;
+    text-decoration: none;
+    color: #cfd8ff;
+    position: relative;
+}
+
+.navbar nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #00f5ff;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover::after {
+    width: 100%;
+}
+
+
+/* ================== HERO ================== */
+
+.hero {
+    min-height: 100vh;
     display: flex;
-    gap: 30px;
+    align-items: center;
+    padding: 80px;
+    background: url("../images/ai-bg.png") no-repeat right center;
+    background-size: 45%;
+    animation: fadeIn 1.2s ease;
 }
 
-.nav-links li {
-    cursor: pointer;
-    opacity: 0.8;
-}
-
-.hero-content {
-    margin-top: 120px;
-    max-width: 650px;
-}
-
-.hero-content h1 {
-    font-size: 3.2rem;
+.hero-text h1 {
+    font-size: clamp(2.4rem, 4vw, 3.8rem);
     line-height: 1.2;
+    background: linear-gradient(90deg, #00f5ff, #8a5cff);
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
-.hero-content p {
-    margin: 20px 0;
-    font-size: 1.1rem;
-    opacity: 0.85;
+.hero-text p {
+    margin: 25px 0;
+    max-width: 560px;
+    color: #d0d8ff;
 }
 
-.cta {
-    margin-top: 30px;
-    display: flex;
-    gap: 20px;
-}
+
+/* ================== BUTTONS ================== */
 
 .btn {
-    padding: 14px 28px;
-    border-radius: 8px;
-    font-size: 1rem;
+    padding: 14px 30px;
+    border-radius: 10px;
     border: none;
     cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .primary {
-    background: linear-gradient(90deg, #00e5ff, #7c4dff);
+    background: linear-gradient(90deg, #00f5ff, #8a5cff);
     color: #000;
 }
 
 .secondary {
     background: transparent;
+    border: 1px solid #00f5ff;
     color: #fff;
-    border: 1px solid #00e5ff;
+    margin-left: 15px;
 }
 
-.features {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    padding: 80px;
-    background-color: #0b1020;
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 245, 255, 0.3);
 }
 
-.feature-card {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border-radius: 14px;
-    padding: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
-.feature-card h3 {
-    color: #00e5ff;
-    margin-bottom: 10px;
-}
+/* ================== SECTIONS ================== */
 
-.feature-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 30px rgba(0, 229, 255, 0.3);
-}
-
-@media (max-width: 768px) {
-    .hero {
-        padding: 30px;
-    }
-    .hero-content h1 {
-        font-size: 2.2rem;
-    }
-    .features {
-        grid-template-columns: 1fr;
-        padding: 40px 20px;
-    }
-    .nav-links {
-        display: none;
-    }
-}
-
-.why-us {
-    padding: 100px 80px;
+.section {
+    padding: 100px 70px;
     text-align: center;
-    background: linear-gradient(180deg, #0b1020, #0f1b3d);
 }
 
-.why-us h2 {
-    font-size: 2.5rem;
-    margin-bottom: 60px;
-    color: #ffffff;
+.section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
 }
 
-.why-cards {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
+.section.dark {
+    background: linear-gradient(180deg, #070c1a, #0b1430);
 }
 
-.why-card {
-    min-width: 250px;
-    padding: 25px 30px;
-    border-radius: 16px;
+
+/* ================== GRID CARDS ================== */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 35px;
+    margin-top: 50px;
+}
+
+.card {
+    padding: 35px;
+    border-radius: 18px;
     background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(14px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    color: #ffffff;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(15px);
+    transition: transform 0.4s, box-shadow 0.4s;
 }
 
-.why-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 35px rgba(124, 77, 255, 0.4);
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
 }
 
-.hero-content {
-    animation: fadeUp 1s ease forwards;
+
+/* ================== PROCESS ================== */
+
+.process {
+    max-width: 600px;
+    margin: auto;
+    text-align: left;
+    font-size: 1.05rem;
 }
 
-@keyframes fadeUp {
+.process li {
+    margin-bottom: 15px;
+}
+
+
+/* ================== FOOTER ================== */
+
+.footer {
+    padding: 25px;
+    text-align: center;
+    opacity: 0.6;
+}
+
+
+/* ================== ANIMATIONS ================== */
+
+@keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(40px);
     }
     to {
         opacity: 1;
@@ -189,16 +200,24 @@ p {
     }
 }
 
-@media (max-width: 768px) {
-    .why-us {
-        padding: 60px 20px;
+
+/* ================== RESPONSIVE ================== */
+
+@media (max-width: 900px) {
+    .hero {
+        background: none;
+        padding: 50px 25px;
     }
-    .why-us h2 {
-        font-size: 2rem;
+    .navbar {
+        padding: 20px;
     }
 }
 
-#auth-box {
-    margin-top: 30px;
-    max-width: 320px;
+@media (max-width: 600px) {
+    .navbar nav {
+        display: none;
+    }
+    .hero-text h1 {
+        font-size: 2.1rem;
+    }
 }

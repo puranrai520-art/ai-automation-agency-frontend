@@ -2,68 +2,102 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AutoNirvanaAI – AI Automation Agency</title>
+
+    <!-- Clerk -->
     <script async crossorigin="anonymous" data-clerk-publishable-key="pk_test_cmVzb2x2ZWQtc2VhZ3VsbC02LmNsZXJrLmFjY291bnRzLmRldiQ" src="https://cdn.jsdelivr.net/npm/@clerk/clerk-js@latest/dist/clerk.browser.js">
     </script>
 
-
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI Automation Agency</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" />
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div id="auth-box"></div>
-    <header class="hero">
-        <nav class="nav">
-            <div class="logo">AutoNirvanaAI</div>
-            <ul class="nav-links">
-                <li>Home</li>
-                <li>Services</li>
-                <li>Solutions</li>
-                <li>Contact</li>
-            </ul>
-        </nav>
 
-        <div class="hero-content">
-            <h1>Unlock the Power of AI Automation</h1>
-            <p>AI Calling Agents, WhatsApp Bots & Smart Automations for Businesses</p>
+    <!-- AUTH -->
+    <div id="auth-box" class="auth-box"></div>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">AutoNirvanaAI</div>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#why">Why Us</a>
+            <a href="#process">Process</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Automate Your Business with AI</h1>
+            <p>
+                We build AI Calling Agents, WhatsApp Bots and Smart Automations that save time, reduce cost and increase revenue.
+            </p>
             <div class="cta">
-                <button class="btn primary">Get Demo</button>
+                <button class="btn primary">Get Free Demo</button>
                 <button class="btn secondary">Talk to AI</button>
             </div>
         </div>
-        <section class="why-us">
-            <h2>Why Choose Us?</h2>
-            <div class="why-cards">
-                <div class="why-card">Low Cost AI Automation</div>
-                <div class="why-card">No-Code Setup for Businesses</div>
-                <div class="why-card">24/7 AI Support Agents</div>
-            </div>
-        </section>
-        <section class="features">
-            <div class="feature-card">
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section">
+        <h2>Our AI Services</h2>
+        <div class="grid">
+            <div class="card">
                 <h3>AI Calling Agents</h3>
-                <p>24/7 automated calls for leads, follow-ups, and support.</p>
+                <p>Automated inbound & outbound calls for leads, reminders and support.</p>
             </div>
-
-            <div class="feature-card">
+            <div class="card">
                 <h3>WhatsApp AI Bots</h3>
-                <p>Instant replies, order handling, and customer engagement.</p>
+                <p>24/7 WhatsApp automation for orders, queries and follow-ups.</p>
             </div>
-
-            <div class="feature-card">
+            <div class="card">
                 <h3>Business Automation</h3>
-                <p>Save time by automating repetitive business workflows.</p>
+                <p>CRM, lead capture, follow-ups and reporting – fully automated.</p>
             </div>
-        </section>
-    </header>
-    <!-- JS -->
+        </div>
+    </section>
+
+    <!-- WHY US -->
+    <section id="why" class="section dark">
+        <h2>Why Choose AutoNirvanaAI?</h2>
+        <div class="grid">
+            <div class="card glass">Low Cost, High ROI</div>
+            <div class="card glass">No-Code Setup</div>
+            <div class="card glass">Secure & Scalable</div>
+            <div class="card glass">24/7 AI Support</div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process" class="section">
+        <h2>How It Works</h2>
+        <ol class="process">
+            <li>Understand your business problem</li>
+            <li>Design AI automation workflow</li>
+            <li>Deploy AI agents & bots</li>
+            <li>Monitor, optimize and scale</li>
+        </ol>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section dark">
+        <h2>Start Automating Today</h2>
+        <p>Email us at <strong>contact@autonirvana.ai</strong></p>
+    </section>
+
+    <footer class="footer">
+        © 2026 AutoNirvanaAI. All rights reserved.
+    </footer>
+
     <script src="js/main.js"></script>
 </body>
 
